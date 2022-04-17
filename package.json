@@ -1,0 +1,19 @@
+{
+  "name": "js002",
+  "version": "0.1.0",
+  "description": "\"# 02_Practice NodeJS to build Backend\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoJP-hub/JS002.git"
+  },
+  "author": "Go Hirano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GoJP-hub/JS002/issues"
+  },
+  "homepage": "https://github.com/GoJP-hub/JS002#readme"
+}

@@ -1,0 +1,31 @@
+■Install NodeJs & npm
+Go to website for NodeJS
+Get the installer for LTS
+Use the installer (with default setting) to installer
+Check on terminal that nodejs and npm has been installed
+    node -v
+    npm -v
+
+■基本設定
+Visual Studio Codeを利用して開発する
+
+■プロジェクト作成
+最小の設定は、ルートディレクトリにpackage.jsonを配置すること
+package.jsonの自動生成は、以下を実行する
+    npm init
+以下の記入を行う
+    package name: ルートディレクトリと同じにする
+    version: 0.0.1
+    author: go hirano
+    license: MIT
+補足
+    versionは、semantic versioningを利用していて、Major/Minor/Bugの粒度で対応
+    scripts二は、ショートカットのスクリプトを定義できる
+
+■基本確認: javascript
+jsをextensionにしたファイルを作成
+以下のコマンドを記載
+    console.log("Hello World!");
+対象スクリプトを実行する
+    terminalでnode "file名"を実行する
+    IDEでf5を押下する
