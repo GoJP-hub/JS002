@@ -1,0 +1,27 @@
+■サーバー作成
+サーバー利用では、以下を行う
+・httpモジュールを読み込む
+・createServerで、サーバーを作成する
+・listen(portNo)で、サーバにポートを付与する
+
+サンプルでは、
+・responseのendイベントに、テキスト
+・localhostの指定ポートを開くことで、確認をする
+
+サーバー側のReq/Resのテストは、Postmanを利用する
+
+■Client作成
+クライアント利用では、以下を行う
+・httpモジュールを読み込む
+・httpResponseの変数を作成する
+・httpResponseの変数では、以下の定義を行う
+　　・リクエスト先のURL
+　　・Option
+　　・受信後のコールバック（サーバーサイドのレスポンス受信後の処理）
+
+サンプルでは、デバックの一環として、コンソール出力をする。
+res.pipe(process.stdout)を利用する場合は、
+debugからlaunch.jsonを開き、// "outputCapture": "std"をDebugのLaunch.jsonに追加する
+
+
+■補足

@@ -56,3 +56,18 @@
 // flOps.displayConsole();
 // flOps.writeText("Hello World!");
 // flOps.copyText();
+
+// Lesson04: HTTP
+// Create Server
+const serverM = require("./modules/server");
+var serverInst = new serverM();
+serverInst.listenServer();
+// Create Client
+const clientM = require("./modules/client");
+var clientInst = new clientM();
+// console.log("Display GET")
+// clientInst.runGet();
+// console.log("Display POST")
+// clientInst.runPost();
+// console.log("Display POST-ERR")
+// clientInst.runPostErr();
