@@ -35,50 +35,24 @@
 // clock.start();
 
 // Lesson03-1: passモジュール
+// const filePathMod = require("./modules/filePathModule");
 // const path = require("path");
-// console.log(path.dirname(__filename));
-// console.log(path.basename(__filename));
-// console.log(path.extname(__filename));
 
-// console.log(__dirname);
-// var subFold = path.join(__dirname, "modules");
-// console.log(subFold);
-// console.log(path.join(subFold, "..\\index.js"));
+// var subFld = path.join(__dirname, "modules");
+// var irrFlName = subFld + "/../index.js"
 
-// var homeUnnormal = subFold + "\\..\\index.js"
-// console.log(homeUnnormal);
-// console.log(path.normalize(homeUnnormal));
+// var filePathM = new filePathMod();
+// filePathM.displayDirectory(__filename);
+// filePathM.displayFileName(__filename);
+// filePathM.displayExtension(__filename);
+// filePathM.mergePath(__dirname, "modules");
+// filePathM.mergePath(subFld, "../index.js");
+// filePathM.normalizePath(irrFlName);
 
-// Lesson03-2: file reader
-// const path = require("path");
-// const fs = require("fs");
-// // variables
-// var message = "";
-// var staticPath = path.join(__dirname, "static")
 
-// // set reader stream
-// var reader = fs.createReadStream(path.join(staticPath, "sample.txt"), "utf8");
-
-// // start the stream
-// reader.on("data", (chunk) => {message += chunk;});
-// reader.on("end", () => {
-//     console.log(message);
-// });
-// reader.resume();
-
-// Lesson03-3: file writer
-// import module
-var path = require("path");
-var fs = require("fs");
-
-//variable
-var outputFileFld = path.join(__dirname, "static")
-
-// simple write method
-var writer = fs.createWriteStream(path.join(outputFileFld, "created.txt"), "utf8");
-writer.end("Hello World !");
-
-var reader = fs.createReadStream(path.join(outputFileFld, "sample.txt"), "utf8");
-var writer = fs.createWriteStream(path.join(outputFileFld, "sample-copy.txt"), "utf8");
-reader.pipe(writer);
-reader.resume();
+// Lesson03-2: stream--file reader & writer
+// const fileOpStream = require("./modules/fileStreamModule");
+// var flOps = new fileOpStream();
+// flOps.displayConsole();
+// flOps.writeText("Hello World!");
+// flOps.copyText();
